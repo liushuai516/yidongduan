@@ -18,6 +18,7 @@ function start(e) {
 }
 function move(e) {
     e.preventDefault();
+    /*阻止默认行为*/
     var touchMove = e.changedTouches[0].pageY;
     var changePos = touchMove - this.startY;
     var cur = this.index;

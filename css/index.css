@@ -214,6 +214,7 @@ html,body{
     font-family: Microsoft YaHei;
 
 }
+
 @-webkit-keyframes rotate {
     0%{
         -webkit-transform: rotate(0deg) scale(0.2);
@@ -249,6 +250,25 @@ html,body{
     top: 40%;
     position: absolute;
 
+}
+.a3 span:nth-child(2){
+
+    left: 48%;
+    bottom: 5%;
+    position: absolute;
+
+}
+.a3 span:before{
+    content: "";
+    width: 15px;
+    height:15px;
+    border-right:4px solid #fff;
+    border-top:4px solid #fff;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    position: absolute;
+    left:45%;
+    bottom:120% ;
 }
 .a3 p{
     text-shadow: 0 0 0 rgb(188, 178, 188),
