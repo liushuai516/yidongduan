@@ -4,15 +4,13 @@ var winW = window.innerWidth;
 var winH = window.innerHeight;
 var desW = 640;
 var desH = 960;
-
-
 main.style.webkitTransform = "scale(" + winH / desH + ")";
 [].forEach.call(oLis, function () {
     arguments[0].index = arguments[1];
     arguments[0].addEventListener('touchstart', start, false);
     arguments[0].addEventListener('touchmove', move, false);
     arguments[0].addEventListener('touchend', end, false);
-})
+});
 function start(e) {
     this.startY = e.changedTouches[0].pageY;
 }
@@ -30,32 +28,26 @@ function move(e) {
         }
         arguments[0].className = "";
         arguments[0].firstElementChild.id = "";
-    })
+    });
+    var pos;
     if (changePos > 0) {
-        var pos = -winH + changePos;
+         pos = -winH + changePos;
         this.preSIndex = cur == 0 ? oLis.length - 1 : cur - 1;
-
     } else if (changePos < 0) {
-        var pos = winH + changePos;
+         pos = winH + changePos;
         this.preSIndex = cur == oLis.length - 1 ? 0 : cur + 1;
-
     }
     oLis[this.preSIndex].style.webkitTransform = "translate(0," + pos + "px)";
     oLis[this.preSIndex].className = "zIndex";
     oLis[this.preSIndex].style.display = "block";
     oLis[cur].style.webkitTransform = "scale(" + (1 - scalePos) + ") translate(0," + changePos + "px)";
 }
-function end(e) {
+function end() {
     oLis[this.preSIndex].style.webkitTransform = "translate(0,0)";
     oLis[this.preSIndex].style.webkitTransition = "0.5s";
     oLis[this.preSIndex].addEventListener('webkitTransitionEnd', function () {
         this.style.webkitTransition = "";
-        this.firstElementChild.id = "a" + (this.index + 1);
+        this.firstElementChild.id = "page" + (this.index + 1);
     })
 }
-window.setTimeout(function () {
-    var oList = document.querySelectorAll(".a3>div");
-    for (var i = 0; i < oList.length; i++) {
-        oList[i].className = "move";
-    }
-}, 200);
+

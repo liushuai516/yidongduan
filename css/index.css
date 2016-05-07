@@ -133,7 +133,7 @@ html,body{
         animation-timing-function: ease-in;
     }
 }
-#a1 img{
+#page1 img{
     -webkit-animation: flip 1.5s linear 1.5s infinite both;
     animation: flip 1.5s linear 1.5s infinite both;
 }
@@ -149,28 +149,24 @@ html,body{
     -webkit-transform: translate(500px,400px);
     transform: translate(500px,400px);
 }
-#a1 p:nth-child(1){
+#page1 p:nth-child(1){
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-#a1 p:nth-child(3){
+#page1 p:nth-child(3){
     -webkit-transition: 1.5s;
     transition: 1.5s;
 }
-#a1 p:nth-child(2){
+#page1 p:nth-child(2){
     -webkit-transition: 1s;
     transition: 1s;
 }
-
-#a1 p{
+#page1 p{
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
     font-size: 30px;
     margin-top: 55px;
-    font-family: Microsoft YaHei;
-
 }
-
 .a2{
     width: 100%;
     text-align: center;
@@ -182,11 +178,10 @@ html,body{
 }
 .a2 img{
     width: 200px;
-    height: 250px;
-    border-radius: 50%;
+    height: 200px;
     position: absolute;
-    left:52%;
-    top:-181%;
+    left:35%;
+    top:-180%;
 }
 .a2 p:nth-child(1){
     -webkit-transform: translate(-500px,0);
@@ -204,17 +199,14 @@ html,body{
     -webkit-transform: translate(500px,0);
     transform: translate(500px,0);
 }
-#a2 p{
+#page2 p{
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
     -webkit-transition: 1s;
     transition: 1s;
     font-size: 30px;
     margin-top: 10px;
-    font-family: Microsoft YaHei;
-
 }
-
 @-webkit-keyframes rotate {
     0%{
         -webkit-transform: rotate(0deg) scale(0.2);
@@ -225,52 +217,16 @@ html,body{
         transform:rotate(720deg) scale(1);
     }
 }
-#a2 img{
+#page2 img{
     -webkit-animation:rotate 1s ease-in-out ;
     animation:rotate 1s ease-in-out ;
 }
-@keyframes rotate {
-    0%{
-        -webkit-transform: rotate(0deg) scale(0.2);
-        transform: rotate(0deg) scale(0.2);
-    }
-    100%{
-        -webkit-transform:rotate(720deg) scale(1);
-        transform:rotate(720deg) scale(1);
-    }
-}
-#a2 img{
-    -webkit-animation:rotate 1s ease-in-out ;
-    animation:rotate 1s ease-in-out ;
-}
-.a3 p:nth-child(1){
+.a3 p{
     font-size: 60px;
     color: white;
     left: 30%;
     top: 40%;
     position: absolute;
-
-}
-.a3 span:nth-child(2){
-
-    left: 48%;
-    bottom: 5%;
-    position: absolute;
-
-}
-.a3 span:before{
-    content: "";
-    width: 15px;
-    height:15px;
-    border-right:4px solid #fff;
-    border-top:4px solid #fff;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    position: absolute;
-    left:45%;
-    bottom:120% ;
-}
-.a3 p{
     text-shadow: 0 0 0 rgb(188, 178, 188),
     1px -1px 0 rgb(173, 163, 173),
     2px -2px 0 rgb(157, 147, 157),
